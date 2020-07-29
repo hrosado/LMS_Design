@@ -101,7 +101,6 @@ C:\Users\Developer\source\repos\LMS_Design\LMS_Design\bin\Microsoft.Owin.Securit
 C:\Users\Developer\source\repos\LMS_Design\LMS_Design\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
 C:\Users\Developer\source\repos\LMS_Design\LMS_Design\bin\Microsoft.Owin.Security.OAuth.xml
 C:\Users\Developer\source\repos\LMS_Design\LMS_Design\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-C:\Users\Developer\source\repos\LMS_Design\LMS_Design\obj\Debug\LMS_Design.csprojAssemblyReference.cache
 C:\Users\Developer\source\repos\LMS_Design\LMS_Design\obj\Debug\LMS_Design.csproj.CoreCompileInputs.cache
 C:\Users\Developer\source\repos\LMS_Design\LMS_Design\obj\Debug\LMS_Design.csproj.CopyComplete
 C:\Users\Developer\source\repos\LMS_Design\LMS_Design\obj\Debug\LMS_Design.dll
