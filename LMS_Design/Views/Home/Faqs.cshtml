@@ -1,0 +1,43 @@
+﻿
+@{
+    ViewBag.Title = "Faqs";
+}
+
+@*<h2>FAQ's</h2>*@
+<h4>Frequently Asked Questions (FAQ's) or Things You Might Want to Know</h4>
+
+<table id="faqsTable">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Position</th>
+            <th>Office</th>
+            <th>Age</th>
+            <th>Salary</th>
+        </tr>
+    </thead>
+</table>
+@*<link href="//cdn.datatables.net/1.10.21/css/jquery.dataTables.min.css" rel="stylesheet" />*@
+
+@section scripts{
+    <script src="//cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#employeeTable').DataTable({
+                "ajax": {
+                    "url":"/Employee/GetList",
+                    "type":"GET",
+                    "datatype":"json"
+                },
+                "columns": [
+                    {"data":"Name"},
+                    {"data":"Position"},
+                    {"data":"Office"},
+                    {"data":"Age"},
+                    {"data":"Salary"}
+                ]
+            });
+        });
+    </script>
+
+}
