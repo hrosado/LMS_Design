@@ -105,7 +105,6 @@ C:\Users\Developer\source\repos\LMS_Design\LMS_Design\obj\Debug\LMS_Design.cspro
 C:\Users\Developer\source\repos\LMS_Design\LMS_Design\obj\Debug\LMS_Design.csproj.CopyComplete
 C:\Users\Developer\source\repos\LMS_Design\LMS_Design\obj\Debug\LMS_Design.dll
 C:\Users\Developer\source\repos\LMS_Design\LMS_Design\obj\Debug\LMS_Design.pdb
-C:\Users\Developer\source\repos\LMS_Design\LMS_Design\obj\Debug\LMS_Design.csprojAssemblyReference.cache
 C:\Users\Telework\source\repos\LMS_Design\LMS_Design\bin\LMS_Design.dll.config
 C:\Users\Telework\source\repos\LMS_Design\LMS_Design\bin\LMS_Design.dll
 C:\Users\Telework\source\repos\LMS_Design\LMS_Design\bin\LMS_Design.pdb
@@ -213,3 +212,4 @@ C:\Users\Telework\source\repos\LMS_Design\LMS_Design\obj\Debug\LMS_Design.csproj
 C:\Users\Telework\source\repos\LMS_Design\LMS_Design\obj\Debug\LMS_Design.csproj.CopyComplete
 C:\Users\Telework\source\repos\LMS_Design\LMS_Design\obj\Debug\LMS_Design.dll
 C:\Users\Telework\source\repos\LMS_Design\LMS_Design\obj\Debug\LMS_Design.pdb
+C:\Users\Developer\source\repos\LMS_Design\LMS_Design\obj\Debug\LMS_Design.csprojAssemblyReference.cache

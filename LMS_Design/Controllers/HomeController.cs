@@ -26,5 +26,11 @@ namespace LMS_Design.Controllers
 
             return View();
         }
+        public ActionResult FAQs()
+        {
+            ViewBag.Message = "Your contact page.";
+
+            return View();
+        }
     }
 }

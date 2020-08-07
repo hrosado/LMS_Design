@@ -9,7 +9,8 @@
     <title>Top navbar example · Bootstrap</title>
 
     <!-- Custom styles for this template -->
-
+    <script>
+    </script>
 
     @*<script src="~/Scripts/offcanvas.js"></script>*@
     @*<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
@@ -17,25 +18,30 @@
 </head>
 <body>
     <nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark">
-        <a class="navbar-brand mr-auto mr-lg-0" href="#">Offcanvas navbar</a>
+        <a class="navbar-brand mr-auto mr-lg-0" href="#">LMS</a>
         <button class="navbar-toggler p-0 border-0" type="button" data-toggle="offcanvas">
             <span class="navbar-toggler-icon"></span>
         </button>
 
         <div class="navbar-collapse offcanvas-collapse" id="navbarsExampleDefault">
             <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" href="#">Dashboard <span class="sr-only">(current)</span></a>
+                <li class="@(ViewContext.RouteData.Values["Action"].ToString() == "Index" ? "active" : "")">
+                    <a class="nav-link" href="@Url.Action("Index", "Home")"> Home </a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Notifications</a>
+
+                <li class="@(ViewContext.RouteData.Values["Action"].ToString() == "About" ? "active" : "")">
+                    <a class="nav-link" href="@Url.Action("About", "Home")"> About </a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Profile</a>
+
+                <li class="@(ViewContext.RouteData.Values["Action"].ToString() == "FAQs" ? "active" : "")">
+                    <a class="nav-link" href="@Url.Action("FAQs", "Home")"> FAQs </a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Switch account</a>
+                <li class="@(ViewContext.RouteData.Values["Action"].ToString() == "Contact" ? "active" : "")">
+                    <a class="nav-link" href="@Url.Action("Contact", "Home")"> Contact </a>
                 </li>
+                <li class="@(ViewContext.RouteData.Values["Action"].ToString() == "Products" ? "active" : "")">
+            <a class="nav-link" href="@Url.Action("Index", "Products")"> Products </a>
+        </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Settings</a>
                     <div class="dropdown-menu" aria-labelledby="dropdown01">
@@ -53,29 +59,25 @@
     </nav>
 
     <div class="nav-scroller bg-white shadow-sm">
-        <nav class="nav nav-underline">
-            <a class="nav-link active" href="#">Dashboard</a>
-            <a class="nav-link" href="#">
-                Friends
-                <span class="badge badge-pill bg-light align-text-bottom">27</span>
-            </a>
-            <a class="nav-link" href="#">Explore</a>
-            <a class="nav-link" href="#">Suggestions</a>
-            <a class="nav-link" href="#">Link</a>
-            <a class="nav-link" href="#">Link</a>
-            <a class="nav-link" href="#">Link</a>
-            <a class="nav-link" href="#">Link</a>
-            <a class="nav-link" href="#">Link</a>
+        <nav id="nav-list" class="nav nav-underline">
+            <a class="nav-link" href="~/Dashboard/Index"> Dashboard </a>
+            <a class="nav-link" href="~/Training/MyTraining"> My Training <span class="badge badge-pill bg-light align-text-bottom">[27]</span></a>
+            <a class="nav-link" href="~/Training/Index"> Training Center</a>
+            <a class="nav-link" href="~/SkillsCerts/Index"> Skills &amp; Certs</a>
+            <a class="nav-link" href="~/Reports/Index"> Reports</a>
+            <div class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="dropdownB" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Reports</a>
+                <div class="dropdown-menu" aria-labelledby="dropdown">
+                    <a class="dropdown-item" href="#">Action</a>
+                    <a class="dropdown-item" href="#">Another action</a>
+                    <a class="dropdown-item" href="#">Something else here</a>
+                </div>
+            </div>
         </nav>
     </div>
 
     <main role="main" class="container">
         @RenderBody()
-        @*<div class="jumbotron">
-                <h1>Navbar example</h1>
-                <p class="lead">This example is a quick exercise to illustrate how fixed to top navbar works. As you scroll, it will remain fixed to the top of your browser’s viewport.</p>
-                <a class="btn btn-lg btn-primary" href="../components/navbar/" role="button">View navbar docs &raquo;</a>
-            </div>*@
         <hr />
         <footer>
             <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
