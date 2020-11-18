@@ -105,3 +105,4 @@ C:\Users\Telework\Source\Repos\LMS_Design\LMS_Design\obj\Debug\LMS_Design.csproj
 C:\Users\Telework\Source\Repos\LMS_Design\LMS_Design\obj\Debug\LMS_Design.csproj.CopyComplete
 C:\Users\Telework\Source\Repos\LMS_Design\LMS_Design\obj\Debug\LMS_Design.dll
 C:\Users\Telework\Source\Repos\LMS_Design\LMS_Design\obj\Debug\LMS_Design.pdb
+C:\Users\Telework\Source\Repos\LMS_Design\LMS_Design\obj\Debug\LMS_Design.csprojAssemblyReference.cache

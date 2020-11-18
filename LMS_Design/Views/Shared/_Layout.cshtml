@@ -3,29 +3,54 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - My ASP.NET Application</title>
+    <title>@ViewBag.Title - Learning Managemnt System</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
-    <title>Top navbar example · Bootstrap</title>
+    <title>LMS - Learning Management System</title>
 
     <!-- Custom styles for this template -->
     <script>
     </script>
-
+     
     @*<script src="~/Scripts/offcanvas.js"></script>*@
     @*<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>*@
 <style>
-    .SearchBar {
-        position: absolute;
-        top: 355px;
-        left: 575px;
+    /* MEGA MENU STYLE
+********************************/
+    .mega-menu {
+        padding: 10px 0px !important;
+        width: 540px;
+        border-radius: 0;
+        margin-top: 0px;
     }
 
-        .SearchBar input {
-            height: 30px;
-            width: 50px;
+        .mega-menu li {
+            display: inline-block;
+            float: left;
+            font-size: 0.94rem;
+            padding: 3px 0px;
         }
+
+            .mega-menu li.mega-menu-column {
+                margin-right: 20px;
+                width: 150px;
+            }
+
+        .mega-menu .nav-header {
+            padding: 0 !important;
+            margin-bottom: 10px;
+            display: inline-block;
+            width: 100%;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .mega-menu img {
+            padding-bottom: 10px;
+        }
+
+
+
 </style>
 </head>
 <body>
@@ -51,19 +76,19 @@
                     <a class="nav-link" href="@Url.Action("Contact", "Home")"> LMS Help Request </a>
                 </li>
                 @*<li class="@(ViewContext.RouteData.Values["Action"].ToString() == "Data" ? "active" : "")">
-                        <a class="nav-link" href="@Url.Action("Data", "Home")"> Data </a>
-                    </li>*@
+            <a class="nav-link" href="@Url.Action("Data", "Home")"> Data </a>
+        </li>*@
                 @*<li class="nav-item">
-                        <a class="nav-link" href="#">Switch account</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Settings</a>
-                        <div class="dropdown-menu" aria-labelledby="dropdown01">
-                            <a class="dropdown-item" href="#">Action</a>
-                            <a class="dropdown-item" href="#">Another action</a>
-                            <a class="dropdown-item" href="#">Something else here</a>
-                        </div>
-                    </li>*@
+            <a class="nav-link" href="#">Switch account</a>
+        </li>
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Settings</a>
+            <div class="dropdown-menu" aria-labelledby="dropdown01">
+                <a class="dropdown-item" href="#">Action</a>
+                <a class="dropdown-item" href="#">Another action</a>
+                <a class="dropdown-item" href="#">Something else here</a>
+            </div>
+        </li>*@
             </ul>
             @*<form class="form-inline my-2 my-lg-0">
                     <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
@@ -73,25 +98,32 @@
             <ul class="nav navbar-nav flex-row ml-auto">
                 <li class="nav-item order-2 order-md-1"><a href="#" class="nav-link" title="settings"><i class="fa fa-cog fa-fw fa-lg"></i></a></li>
                 <li class="dropdown order-1">
-                    <button type="button" id="dropdownMenu1" data-toggle="dropdown" class="btn btn-outline-secondary dropdown-toggle">Login <span class="caret"></span></button>
-                    <ul class="dropdown-menu dropdown-menu-right mt-2">
-                        <li class="px-3 py-2">
-                            <form class="form" role="form">
-                                <div class="form-group">
-                                    <input id="emailInput" placeholder="Email" class="form-control form-control-sm" type="text" required="">
-                                </div>
-                                <div class="form-group">
-                                    <input id="passwordInput" placeholder="Password" class="form-control form-control-sm" type="text" required="">
-                                </div>
-                                <div class="form-group">
-                                    <button type="submit" class="btn btn-primary btn-block">Login</button>
-                                </div>
-                                <div class="form-group text-center">
-                                    <small><a href="#" data-toggle="modal" data-target="#modalPassword">Forgot password?</a></small>
-                                </div>
-                            </form>
-                        </li>
-                    </ul>
+                    @if (@ViewBag.Title != null)
+                    {
+                        <button type="button" id="dropdownMenu1" data-toggle="dropdown" class="btn btn-outline-secondary dropdown-toggle">Log Out <span class="caret"></span></button>
+                    }
+                    else
+                    {
+                        <button type="button" id="dropdownMenu1" data-toggle="dropdown" class="btn btn-outline-secondary dropdown-toggle">Login <span class="caret"></span></button>
+                        <ul class="dropdown-menu dropdown-menu-right mt-2">
+                            <li class="px-3 py-2">
+                                <form class="form" role="form">
+                                    <div class="form-group">
+                                        <input id="emailInput" placeholder="Email" class="form-control form-control-sm" type="text" required="">
+                                    </div>
+                                    <div class="form-group">
+                                        <input id="passwordInput" placeholder="Password" class="form-control form-control-sm" type="text" required="">
+                                    </div>
+                                    <div class="form-group">
+                                        <button type="submit" class="btn btn-primary btn-block">Login</button>
+                                    </div>
+                                    <div class="form-group text-center">
+                                        <small><a href="#" data-toggle="modal" data-target="#modalPassword">Forgot password?</a></small>
+                                    </div>
+                                </form>
+                            </li>
+                        </ul>
+                    }
                 </li>
             </ul>
         </div>
@@ -213,39 +245,178 @@
         </form>*@
     <!--</nav>-->
     <!-- example 7 - center on mobile 2-->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="d-flex flex-grow-1">
-            <span class="w-100 d-lg-none d-block"><!-- hidden spacer to center brand on mobile --></span>
-            <a class="nav-link" href="~/Dashboard/Index"> Dashboard </a>
-            <a class="nav-link" href="~/Training/MyTraining"> My Training [<span class="badge badge-pill bg-light align-text-bottom">27</span>]</a>
-            <a class="nav-link" href="~/Training/Index"> Training Center</a>
-            <a class="nav-link" href="~/SkillsCerts/Index"> Skills &amp; Certs</a>
-            <a class="nav-link" href="~/Reports/Index"> Reports</a>
-            <div class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="dropdownB" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Reports</a>
-                <div class="dropdown-menu" aria-labelledby="dropdown">
-                    <a class="dropdown-item" href="#">Action</a>
-                    <a class="dropdown-item" href="#">Another action</a>
-                    <a class="dropdown-item" href="#">Something else here</a>
+<div>
+    @if (@ViewBag.Title != null)
+    {
+        <!-- Mobile toggle button -->
+        @*<nav class="navbar navbar-expand-lg position-fixed navbar-light bg-light">*@
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+
+            <div class="d-flex flex-grow-2">
+                <span class="w-100 d-lg-none d-block"><!-- hidden spacer to center brand on mobile --></span>
+                <a class="nav-link" href="~/Dashboard/Index"> Dashboard </a>
+                @* If Admin *@
+                @*<a class="nav-link" href="~/Reports/Index"> Reports</a>*@
+                <div class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="dropdownB" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Administration</a>
+                    <div class="dropdown-menu" aria-labelledby="dropdown">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                    </div>
                 </div>
+                <a class="nav-link" href="~/Training/MyTraining"> My Training [<span class="badge badge-pill bg-light align-text-bottom">27</span>]</a>
+                @*<a class="nav-link" href="~/Training/Index"> Training Center</a>*@
+                @*<div class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="dropdownB" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Training Center</a>
+                        <div class="dropdown-menu" aria-labelledby="dropdown">
+                            <a class="dropdown-item" href="#">Course Bookmarks</a>
+                            <a class="dropdown-item" href="#">Course Information &amp; Enrollment</a>
+                            <a class="dropdown-item" href="#">Curricula</a>
+                            <a class="dropdown-item" href="#">Notes &amp; Assignments</a>
+                            <a class="dropdown-item" href="#">Teaming Center</a>
+                        </div>
+                    </div>*@
+                @*<a class="nav-link" href="~/SkillsCerts/Index"> Skills &amp; Certs</a>*@
+                @*<div class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="dropdownB" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Skills &amp; Certs</a>
+                        <div class="dropdown-menu" aria-labelledby="dropdown">
+                            <a class="dropdown-item" href="#">Deployment</a>
+                            <a class="dropdown-item" href="#">General Crime **</a>
+                            <a class="dropdown-item" href="#">Probationary Agent</a>
+                            <a class="dropdown-item" href="#">Specialities</a>
+                        </div>
+                    </div>*@
+                @*<a class="nav-link" href="~/SkillsCerts/Index"> Library</a>*@
+                @*<div class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="dropdownB" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Library</a>
+                        <div class="dropdown-menu" aria-labelledby="dropdown">
+                            <a class="dropdown-item" href="#">Deployment</a>
+                            <a class="dropdown-item" href="#">General Crime **</a>
+                            <a class="dropdown-item" href="#">Probationary Agent</a>
+                            <a class="dropdown-item" href="#">Specialities</a>
+                        </div>
+                    </div>*@
+
+                @* Mega menu *@
+                <div class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" id="dropdownB" href="#" data-toggle="dropdown">Training Center <b class="caret"></b></a>
+
+                    <ul class="dropdown-menu mega-menu">
+
+                        <li class="mega-menu-column">
+                            <ul>
+                                <li class="nav-header">Training</li>
+                                @*<img src="http://placehold.it/150x120">*@
+                                <li><a href="#">Mega-menu link</a></li>
+                                <li><a href="#">Mega-menu link</a></li>
+                                <li><a href="#">Mega-menu link</a></li>
+                                <li><a href="#">Mega-menu link</a></li>
+                                <li><a href="#">Mega-menu link</a></li>
+                                <li><a href="#">Mega-menu link</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="mega-menu-column">
+                            <ul>
+                                <li class="nav-header">Skills &amp; Certs</li>
+                                @*<img src="http://placehold.it/150x120">*@
+                                <li><a href="#">Mega-menu link</a></li>
+                                <li><a href="#">Mega-menu link</a></li>
+                                <li><a href="#">Mega-menu link</a></li>
+                                <li><a href="#">Mega-menu link</a></li>
+                                <li><a href="#">Mega-menu link</a></li>
+                                <li><a href="#">Mega-menu link</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="mega-menu-column">
+                            <ul>
+                                <li class="nav-header">Library</li>
+                                @*<img src="http://placehold.it/150x120">*@
+                                <li><a href="#">Mega-menu link</a></li>
+                                <li><a href="#">Mega-menu link</a></li>
+                                <li><a href="#">Mega-menu link</a></li>
+                                <li><a href="#">Mega-menu link</a></li>
+                                <li><a href="#">Mega-menu link</a></li>
+                                <li><a href="#">Mega-menu link</a></li>
+                            </ul>
+                        </li>
+
+                    </ul>
+                    <!-- dropdown-menu -->
+
+                </div>
+                <div class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" id="dropdownB" href="#" data-toggle="dropdown">Reports <b class="caret"></b></a>
+
+                    <ul class="dropdown-menu mega-menu">
+
+                        <li class="mega-menu-column">
+                            <ul>
+                                <li class="nav-header">Performance</li>
+                                @*<img src="http://placehold.it/150x120">*@
+                                <li><a href="#">Mega-menu link</a></li>
+                                <li><a href="#">Mega-menu link</a></li>
+                                <li><a href="#">Mega-menu link</a></li>
+                                <li><a href="#">Mega-menu link</a></li>
+                                <li><a href="#">Mega-menu link</a></li>
+                                <li><a href="#">Mega-menu link</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="mega-menu-column">
+                            <ul>
+                                <li class="nav-header">Classroom</li>
+                                @*<img src="http://placehold.it/150x120">*@
+                                <li><a href="#">Mega-menu link</a></li>
+                                <li><a href="#">Mega-menu link</a></li>
+                                <li><a href="#">Mega-menu link</a></li>
+                                <li><a href="#">Mega-menu link</a></li>
+                                <li><a href="#">Mega-menu link</a></li>
+                                <li><a href="#">Mega-menu link</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="mega-menu-column">
+                            <ul>
+                                <li class="nav-header">Locations</li>
+                                @*<img src="http://placehold.it/150x120">*@
+                                <li><a href="#">Mega-menu link</a></li>
+                                <li><a href="#">Mega-menu link</a></li>
+                                <li><a href="#">Mega-menu link</a></li>
+                                <li><a href="#">Mega-menu link</a></li>
+                                <li><a href="#">Mega-menu link</a></li>
+                                <li><a href="#">Mega-menu link</a></li>
+                            </ul>
+                        </li>
+
+                    </ul>
+                    <!-- dropdown-menu -->
+
+                </div>
+                <!-- /.dropdown -->
+                @* End Mega menu *@
+                @*<a class="navbar-brand" href="#">
+                        Navbar 7
+                    </a>
+                    <div class="w-100 text-right">
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#myNavbar7">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                    </div>*@
             </div>
-            @*<a class="navbar-brand" href="#">
-            Navbar 7
-        </a>
-        <div class="w-100 text-right">
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#myNavbar7">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-        </div>*@
-        </div>
-        @*<div class="collapse navbar-collapse flex-grow-1 text-right" id="myNavbar7">*@
+            @*<div class="collapse navbar-collapse flex-grow-1 text-right" id="myNavbar7">*@
             <form class="form-inline my-2 my-lg-0">
                 <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-            </form>
-        @*</div>*@
-    </nav>
+                <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Search</button>
 
+            </form>
+
+            @*</div>*@
+        </nav>
+    }
+    </div>
     <main role="main" class="container">
         <div style="margin-top:25px;">
             @RenderBody()
