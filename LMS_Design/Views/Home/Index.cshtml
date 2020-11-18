@@ -2,7 +2,7 @@
     ViewBag.Title = "Home Page";
 }
 
-<div class="jumbotron">
+@*<div class="jumbotron">
     <h1>ASP.NET</h1>
     <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
     <p><a href="https://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
@@ -28,4 +28,91 @@
         <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
         <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
     </div>
+</div>*@
+
+<div>
+
+    <link href='https://fonts.googleapis.com/css?family=Raleway:400,800,300' rel='stylesheet' type='text/css'>
+    <h1>
+        <embed src="~/Content/Images/AFOSI_LMS_Logo.svg" style="width:100px;" />LMS - Learning Management System
+    </h1>
+    @*<div class="content">*@
+        @*<h2>Sarah</h2>*@
+        <div class="grid">
+            @if (@ViewBag.Title != null)
+            {
+                <figure class="effect-sarah">
+                    <img src="~/Content/Images/01_Admin.jpg" alt="Administration" />
+                    <figcaption>
+                        <h2>Administration <span>-</span></h2>
+                        <p>
+                            Administrator &amp; Instructor Management tools<br />
+                            Location Information<br />
+                            User Directory <br />
+                        </p>
+
+                        <a href="#">View more</a>
+                    </figcaption>
+                </figure>
+            }
+        <figure class="effect-sarah">
+            <img src="~/Content/Images/03_MyTraining.jpg" alt="Training" />
+            <figcaption>
+                <h2>My <span> Training -</span></h2>
+                <p>
+                    Individual Development Plan<br />
+                    Transcripts<br />
+                    ADOT <br />
+                    Profile <br />
+                </p>
+                <a href="#">View more</a>
+            </figcaption>
+        </figure>
+                <figure class="effect-sarah">
+                    <img src="~/Content/Images/02_Training.jpg" alt="My Training" />
+                    <figcaption>
+                        <h2>Training <span>Center -</span></h2>
+                        <p>
+                            Administrator &amp; Instructor Management tools<br />
+                            Location Information<br />
+                            User Directory <br />
+                        </p>
+                        <a href="#">View more</a>
+                    </figcaption>
+                </figure>
+                <figure class="effect-sarah">
+                    <img src="~/Content/Images/04_Reports.jpg" alt="Reports" />
+                    <figcaption>
+                        <h2>Reports <span>-</span></h2>
+                        <p>
+                            Administrator &amp; Instructor Management tools<br />
+                            Location Information<br />
+                            User Directory <br />
+                        </p>
+                        <a href="#">View more</a>
+                    </figcaption>
+                </figure>
+                @*<figure class="effect-sarah">
+                    <img src="https://tympanus.net/Development/HoverEffectIdeas/img/20.jpg" alt="img20" />
+                    <figcaption>
+                        <h2>Free <span>Sarah</span></h2>
+                        <p>Sarah likes to watch clouds. She's quite depressed.</p>
+                        <a href="#">View more</a>
+                    </figcaption>
+                </figure>
+                <figure class="effect-sarah">
+                    <img src="https://tympanus.net/Development/HoverEffectIdeas/img/20.jpg" alt="img20" />
+                    <figcaption>
+                        <h2>Free <span>Sarah</span></h2>
+                        <p>Sarah likes to watch clouds. She's quite depressed.</p>
+                        <a href="#">View more</a>
+                    </figcaption>
+                </figure>*@
+            </div>
+
+    @*</div>*@
+
+
 </div>
+
+<link href="~/Content/Css/GridCss.css" rel="stylesheet" />
