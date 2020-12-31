@@ -192,6 +192,13 @@
     <Content Include="Content\bootstrap-reboot.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Css\GridCss.css" />
+    <Content Include="Content\Images\01_Admin.jpg" />
+    <Content Include="Content\Images\02_Training.jpg" />
+    <Content Include="Content\Images\03_MyTraining.jpg" />
+    <Content Include="Content\Images\04_Reports.jpg" />
+    <Content Include="Content\Images\AFOSI_LMS_Logo.svg" />
+    <Content Include="Content\Images\fingerPrint_01.jpg" />
     <Content Include="Content\navbar-top-fixed.css" />
     <Content Include="Content\offcanvas.css" />
     <Content Include="favicon.ico" />
@@ -303,6 +310,7 @@
     <Content Include="Scripts\umd\popper-utils.min.js" />
     <Content Include="Scripts\umd\popper.js" />
     <Content Include="Scripts\umd\popper.min.js" />
+    <Content Include="Views\Home\Templates\IndexGridCSS.html" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
